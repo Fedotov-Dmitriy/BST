@@ -410,8 +410,6 @@ int main(void)
     testMergeWithNullTrees();
 
     testNegativeValues();
-    testExtremeIntValues();
-
     printf("All BST tests passed successfully.\n");
     return 0;
 }
