@@ -191,8 +191,8 @@ static void testIteratorSortedOrder(void)
     BST* tree = bstCreate();
     assert(tree != NULL);
 
-    int values[] = {10, 5, 15, 3, 7, 12, 20};
-    int expected[] = {3, 5, 7, 10, 12, 15, 20};
+    int values[] = { 10, 5, 15, 3, 7, 12, 20 };
+    int expected[] = { 3, 5, 7, 10, 12, 15, 20 };
 
     for (size_t i = 0; i < sizeof(values) / sizeof(values[0]); i++) {
         assert(bstInsert(tree, values[i]));
@@ -226,7 +226,7 @@ static void testKthMin(void)
     BST* tree = bstCreate();
     assert(tree != NULL);
 
-    int values[] = {10, 5, 15, 3, 7, 12, 20};
+    int values[] = { 10, 5, 15, 3, 7, 12, 20 };
 
     for (size_t i = 0; i < sizeof(values) / sizeof(values[0]); i++) {
         assert(bstInsert(tree, values[i]));
@@ -388,7 +388,6 @@ static void testNegativeValues(void)
 
     bstFree(tree);
 }
-
 
 int main(void)
 {
