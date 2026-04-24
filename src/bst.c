@@ -6,8 +6,6 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-
-
 static BSTNode* bstNodeCreate(int value)
 {
     BSTNode* node = (BSTNode*)malloc(sizeof(BSTNode));
@@ -106,9 +104,7 @@ bool bstInsert(BST* tree, int value)
     return true;
 }
 
-
-// D Удаление
-
+/* D Удаление */
 
 static BSTNode* findMinNode(BSTNode* node)
 {
@@ -178,8 +174,7 @@ void bstDelete(BST* tree, int value)
     }
 }
 
- 
-// H Итератор 
+/* H Итератор */
 
 static bool iteratorEnsureCapacity(Iterator* it)
 {
@@ -287,9 +282,7 @@ void iteratorFree(Iterator* it)
     free(it);
 }
 
-
-// E Слияние двух деревьев
-
+/* E Слияние двух деревьев */
 
 BST* bstMerge(BST* tree1, BST* tree2)
 {
@@ -328,7 +321,6 @@ BST* bstMerge(BST* tree1, BST* tree2)
                 bstFree(result);
                 return NULL;
             }
-            
         }
     }
 
@@ -358,9 +350,7 @@ BST* bstMerge(BST* tree1, BST* tree2)
     return result;
 }
 
-
-// F Проверка корректности BST
-
+/* F Проверка корректности BST */
 
 static bool isValidNode(BSTNode* node, long long minAllowed, long long maxAllowed)
 {
@@ -385,7 +375,7 @@ bool bstIsValid(BST* tree)
     return isValidNode(tree->root, LLONG_MIN, LLONG_MAX);
 }
 
-//   G k-й минимальный элемент
+/* G k й минимальный элемент */
 
 int bstKthMin(BST* tree, int k)
 {
